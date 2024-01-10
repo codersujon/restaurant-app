@@ -52,6 +52,9 @@
     </section>
 </template>
 <script>
+
+import axios from 'axios';
+
     export default {
         name: 'SignUp',
         data (){
@@ -62,8 +65,18 @@
             }
         },
         methods:{
-            signUp(){
-                console.log(this.name, this.email, this.password);
+            async signUp(){
+
+                let result = await axios.post("http://localhost:3000/users", {
+                    name: this.name,
+                    email: this.email,
+                    password: this.password
+                })
+
+                if(result.status == 201){
+                    alert("User Sign Up Successfully!");
+                    localStorage.setItem("User-Info", JSON.stringify(result.data));
+                }
             }
         }
     }
