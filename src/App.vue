@@ -1,11 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <div>
+    <SignUp />
+  </div>
 </template>
 
 <script>
-
+import SignUp from '@/components/SignUp'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    SignUp
+  }
 }
 </script>
 
