@@ -15,26 +15,26 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="text" id="name" class="form-control" placeholder="Enter your name" />
+                                                <input type="text" id="name" class="form-control" v-model="name" placeholder="Enter your name" />
                                             </div>
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="email" id="email" class="form-control" placeholder="Enter your email"/>
+                                                <input type="email" id="email" class="form-control" v-model="email" placeholder="Enter your email"/>
                                             </div>
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="password" id="password" class="form-control" placeholder="Enter your password"/>
+                                                <input type="password" id="password" class="form-control" v-model="password" placeholder="Enter your password"/>
                                             </div>
                                         </div>
 
                                         <div>
-                                            <button type="button" class="btn btn-primary btn-lg">Sign Up</button>
+                                            <button type="button" class="btn btn-primary btn-lg" v-on:click="signUp">Sign Up</button>
                                         </div>
 
                                     </form>
@@ -53,7 +53,19 @@
 </template>
 <script>
     export default {
-        name: 'SignUp'
+        name: 'SignUp',
+        data (){
+            return {
+                name: '',
+                email: '',
+                password: ''
+            }
+        },
+        methods:{
+            signUp(){
+                console.log(this.name, this.email, this.password);
+            }
+        }
     }
 </script>
 
