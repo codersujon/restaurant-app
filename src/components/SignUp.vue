@@ -76,9 +76,16 @@ import axios from 'axios';
 
                 if(result.status == 201){
                     alert("User Sign Up Successfully!");
-                    localStorage.setItem("User-Info", JSON.stringify(result.data));
-                    this.$router.push({name: "HomePage"});
-                }
+                    localStorage.setItem("User-Info", JSON.stringify(result.data)); // convert to JSON
+                    this.$router.push({name: "HomePage"}); // redirect to Home Page
+                } 
+            }
+        },
+
+        mounted(){
+            let user = localStorage.getItem('User-Info');
+            if(user){
+                this.$router.push({name: "HomePage"});
             }
         }
     }
