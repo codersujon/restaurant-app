@@ -35,7 +35,7 @@
                                         </div>
 
                                         <div>
-                                            <button type="button" class="btn btn-primary btn-lg" v-on:click="signUp">Sign Up</button>
+                                            <button type="button" class="btn btn-primary btn-lg w-100" v-on:click="signUp">Sign Up</button>
                                         </div>
 
                                     </form>
