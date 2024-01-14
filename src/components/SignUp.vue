@@ -15,21 +15,22 @@
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="text" id="name" class="form-control" v-model="name" placeholder="Enter your name" />
+                                                <input type="text" id="name" class="form-control" v-model="name" placeholder="Enter your name" required/>
+                                                <div class="valid-feedback">Looks good!</div>
                                             </div>
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="email" id="email" class="form-control" v-model="email" placeholder="Enter your email"/>
+                                                <input type="email" id="email" class="form-control" v-model="email" placeholder="Enter your email" required/>
                                             </div>
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4">
                                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
-                                                <input type="password" id="password" class="form-control" v-model="password" placeholder="Enter your password"/>
+                                                <input type="password" id="password" class="form-control" v-model="password" placeholder="Enter your password" required/>
                                             </div>
                                         </div>
 
