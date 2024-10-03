@@ -6,19 +6,19 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     {
+        path: '/',
         name: "HomePage",
         component: HomePage,
-        path: '/'
     },
     {
+        path: '/SignUp',
         name: "SignUp",
         component: SignUp,
-        path: '/SignUp'
     },
     {
+        path: '/login',
         name: "LoginPage",
         component: LoginPage,
-        path: '/login'
     }
 ]
 
